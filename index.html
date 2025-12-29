@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precious Samuel | Front-End Developer</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Typed.js for dynamic titles -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Particles.js -->
+ <!--  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@3.12.0/tsparticles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.12.0/tsparticles.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdeliver.net/npm/tsparticles@3.12.0/dist/tsparticles.min.js"></script>
+ <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #141414, #050505);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .9s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(249,115,22,.35);
+}
+
+.progress {
+  width: 0;
+  transition: width 1.5s ease;
+}
+
+.modal {
+  background: rgba(0,0,0,.8);
+}
+
+.toast {
+  animation: slideUp .6s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity:0; transform:translateY(30px);}
+  to { opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body class="text-white overflow-x-hidden">
+
+<!-- ================= NAV ================= -->
+<nav class="fixed w-full z-50 bg-black/60 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-extrabold text-orange-500">Precious</h1>
+    <ul class="flex gap-6 text-gray-300">
+      <li><a href="#home" class="hover:text-orange-500">Home</a></li>
+      <li><a href="#about" class="hover:text-orange-500">About</a></li>
+      <li><a href="#services" class="hover:text-orange-500">Services</a></li>
+      <li><a href="#projects" class="hover:text-orange-500">Projects</a></li>
+      <li><a href="#contact" class="hover:text-orange-500">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="min-h-screen flex items-center justify-center px-6">
+  <div class="text-center max-w-4xl fade">
+    <h1 class="text-6xl md:text-7xl font-extrabold text-orange-500 mb-6">
+      I Design & Build<br/>Web Experiences
+    </h1>
+    <span id="typed" class="text-2xl md:text-4xl text-gray-200"></span>
+
+    <p class="mt-8 text-gray-400 text-lg">
+      Front-End Developer specializing in **high-converting, visually stunning, and performance-driven websites**.
+      I help brands stand out and turn visitors into customers.
+    </p>
+
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="#projects" class="px-10 py-4 bg-orange-500 rounded-full font-bold glow">
+        View Projects
+      </a>
+      <a href="#contact" class="px-10 py-4 border border-orange-500 rounded-full hover:bg-orange-500/10">
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-28 px-6 bg-[#0c0c0c]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade">
+    <img src="https://via.placeholder.com/500" class="rounded-2xl shadow-2xl">
+
+    <div>
+      <h2 class="text-4xl font-bold text-orange-500 mb-6">About Me</h2>
+      <p class="text-gray-300 mb-4">
+        I’m Precious Samuel — a creative Front-End Developer with a deep passion for building **modern, interactive, and user-focused interfaces**.
+      </p>
+      <p class="text-gray-400">
+        I combine clean code, strong design sense, and smooth animations to create websites that feel premium and trustworthy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-28 px-6">
+  <div class="max-w-7xl mx-auto text-center fade">
+    <h2 class="text-4xl font-bold text-orange-500 mb-16">Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-8 rounded-2xl glow hover:-translate-y-3 transition">
+        <i class="fas fa-code text-4xl text-orange-500 mb-6"></i>
+        <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+        <p class="text-gray-400">Modern, scalable UI using React, Tailwind, and JavaScript.</p>
+      </div>
+
+      <div class="glass p-8 rounded-2xl glow hover:-translate-y-3 transition">
+        <i class="fas fa-layer-group text-4xl text-orange-500 mb-6"></i>
+        <h3 class="text-xl font-bold mb-4">UI / UX Design</h3>
+        <p class="text-gray-400">Clean layouts, smooth animations, and intuitive flow.</p>
+      </div>
+
+      <div class="glass p-8 rounded-2xl glow hover:-translate-y-3 transition">
+        <i class="fas fa-rocket text-4xl text-orange-500 mb-6"></i>
+        <h3 class="text-xl font-bold mb-4">Optimization</h3>
+        <p class="text-gray-400">Fast load speed, SEO-friendly structure, accessibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="py-28 bg-[#0c0c0c] px-6">
+  <div class="max-w-5xl mx-auto fade">
+    <h2 class="text-4xl font-bold text-orange-500 mb-12 text-center">Skills</h2>
+
+    <div class="space-y-6">
+      <div>
+        <p>HTML / CSS</p>
+        <div class="w-full bg-gray-700 h-3 rounded-full">
+          <div class="progress bg-orange-500 h-3 rounded-full" data-width="95%"></div>
+        </div>
+      </div>
+
+      <div>
+        <p>JavaScript</p>
+        <div class="w-full bg-gray-700 h-3 rounded-full">
+          <div class="progress bg-orange-500 h-3 rounded-full" data-width="90%"></div>
+        </div>
+      </div>
+
+      <div>
+        <p>React</p>
+        <div class="w-full bg-gray-700 h-3 rounded-full">
+          <div class="progress bg-orange-500 h-3 rounded-full" data-width="85%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-24 text-center px-6">
+  <h2 class="text-4xl font-bold mb-6">Have a project in mind?</h2>
+  <p class="text-gray-400 mb-8">Let’s build something exceptional together.</p>
+  <a href="#contact" class="px-12 py-5 bg-orange-500 rounded-full font-bold glow">
+    Start a Conversation
+  </a>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-28 bg-[#0c0c0c] px-6">
+  <div class="max-w-4xl mx-auto text-center fade">
+    <h2 class="text-4xl font-bold text-orange-500 mb-6">Contact Me</h2>
+
+    <form id="contactForm" class="space-y-4">
+      <input required class="w-full p-4 bg-gray-800 rounded" placeholder="Name">
+      <input required class="w-full p-4 bg-gray-800 rounded" placeholder="Email">
+      <textarea class="w-full p-4 bg-gray-800 rounded h-32" placeholder="Message"></textarea>
+      <button class="px-12 py-4 bg-orange-500 rounded-full font-bold glow">
+        Send Message
+      </button>
+    </form>
+
+    <div id="toast" class="hidden mt-6 text-green-400 toast">
+      Message sent successfully 🚀
+    </div>
+
+    <div class="flex justify-center gap-8 mt-10 text-2xl">
+      <a class="hover:text-orange-500"><i class="fab fa-github"></i></a>
+      <a class="hover:text-orange-500"><i class="fab fa-linkedin"></i></a>
+      <a class="hover:text-orange-500"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8 text-center text-gray-500">
+  © 2025 Precious Samuel. All rights reserved.
+</footer>
+
+<script>
+new Typed("#typed", {
+  strings: ["Front-End Developer", "UI Engineer", "Creative Coder"],
+  typeSpeed: 60,
+  backSpeed: 30,
+  loop: true
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add("show");
+      if(e.target.querySelector(".progress")) {
+        document.querySelectorAll(".progress").forEach(p => {
+          p.style.width = p.dataset.width;
+        });
+      }
+    }
+  });
+},{threshold:0.2});
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+document.getElementById("contactForm").addEventListener("submit", e => {
+  e.preventDefault();
+  document.getElementById("toast").classList.remove("hidden");
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-28 px-6 bg-[#111111]">
+  <div class="max-w-7xl mx-auto fade">
+    <h2 class="text-4xl font-bold text-orange-500 text-center mb-16">My Projects</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Project Card -->
+      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="https://via.placeholder.com/600x400" alt="Project One" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project One</h3>
+          <p class="text-gray-300 mb-4">A modern responsive website built with TailwindCSS and interactive animations.</p>
+          <button onclick="openModal('Project One','https://via.placeholder.com/800x600','A full description of Project One including features, tech stack, and outcomes.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
+        </div>
+      </div>
+
+      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="https://via.placeholder.com/600x400" alt="Project Two" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project Two</h3>
+          <p class="text-gray-300 mb-4">Interactive UI components and smooth animations for a modern web app.</p>
+          <button onclick="openModal('Project Two','https://via.placeholder.com/800x600','Detailed description of Project Two with technologies and features.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
+        </div>
+      </div>
+
+      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="https://via.placeholder.com/600x400" alt="Project Three" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project Three</h3>
+          <p class="text-gray-300 mb-4">A fully responsive web application with swipe effects and engaging animations.</p>
+          <button onclick="openModal('Project Three','https://via.placeholder.com/800x600','Full description of Project Three with tech stack and outcomes.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="projectModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50">
+    <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-3xl w-full p-6 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-orange-500 text-2xl">&times;</button>
+      <h3 id="modalTitle" class="text-3xl font-bold text-orange-500 mb-4"></h3>
+      <img id="modalImage" src="" alt="" class="w-full h-64 object-cover rounded mb-4">
+      <p id="modalDesc" class="text-gray-300"></p>
+    </div>
+  </div>
+</section>
+
+  <script src="main.js"></script>
+  </body>
+</html>
