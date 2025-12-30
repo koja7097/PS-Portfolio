@@ -48,3 +48,18 @@ function closeModal(){
   document.getElementById('projectModal').classList.add('hidden');
 }
 
+window.addEventListener("scroll", () => {
+  const scrolled = (window.scrollY /
+    (document.body.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById("scrollProgress").style.width = scrolled + "%";
+});
+
+const buttons = document.querySelectorAll(".filter-btn");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
+

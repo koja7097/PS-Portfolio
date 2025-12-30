@@ -53,6 +53,18 @@ body {
   animation: slideUp .6s ease forwards;
 }
 
+.filter-btn {
+  padding: .6rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid #f97316;
+  color: #f97316;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: #f97316;
+  color: black;
+}
+
 @keyframes slideUp {
   from { opacity:0; transform:translateY(30px);}
   to { opacity:1; transform:translateY(0);}
@@ -75,6 +87,8 @@ body {
     </ul>
   </div>
 </nav>
+
+<div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-orange-500 z-50"></div>
 
 <!-- ================= HERO ================= -->
 <section id="home" class="min-h-screen flex items-center justify-center px-6">
@@ -103,7 +117,7 @@ body {
 <!-- ================= ABOUT ================= -->
 <section id="about" class="py-28 px-6 bg-[#0c0c0c]">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade">
-    <img src="https://via.placeholder.com/500" class="rounded-2xl shadow-2xl">
+    <img src="./Images/Snapchat-351660708.jpg" class="rounded-2xl shadow-2xl">
 
     <div>
       <h2 class="text-4xl font-bold text-orange-500 mb-6">About Me</h2>
@@ -113,6 +127,122 @@ body {
       <p class="text-gray-400">
         I combine clean code, strong design sense, and smooth animations to create websites that feel premium and trustworthy.
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-28 px-6 bg-[#111]">
+ <!--  <div class="max-w-4xl mx-auto fade">
+    <h2 class="text-4xl font-bold text-orange-500 mb-12 text-center">Experience</h2>
+
+    <div class="border-l border-orange-500 pl-6 space-y-8">
+      <div>
+        <h3 class="font-bold text-xl">Frontend Developer</h3>
+        <p class="text-gray-400">Freelance / Internship</p>
+        <p class="text-gray-300 mt-2">
+          Built responsive web apps, consumed APIs, improved UI performance,
+          and collaborated with designers and backend engineers.
+        </p>
+      </div>
+    </div>
+  </div> -->
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="py-28 px-6 bg-[#0c0c0c]">
+  <div class="max-w-6xl mx-auto fade">
+    <h2 class="text-4xl font-bold text-orange-500 text-center mb-20">
+      Professional Experience
+    </h2>
+    
+    <div class="space-y-14">
+
+      <!-- NightCrew -->
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-white">
+          Frontend Engineer — NightCrew Technologies
+        </h3>
+        <p class="text-sm text-gray-400 mb-4">
+          Remote · 2024 – Present
+        </p>
+
+        <p class="text-gray-300 mb-4">
+          Working on scalable, production-ready frontend applications with a strong focus on performance,
+          maintainability, and seamless user experience.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Built component-driven user interfaces using React, TypeScript, Zustand, and Redux</li>
+          <li>Integrated RESTful APIs and optimized data flow for real-time features</li>
+          <li>Developed analytics dashboards using Recharts and Chart.js</li>
+          <li>Collaborated closely with designers and backend engineers in agile teams</li>
+        </ul>
+      </div>
+
+      <!-- Arbitrage -->
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-white">
+          Frontend Developer — Arbitrage Trading Platform
+        </h3>
+        <p class="text-sm text-gray-400 mb-4">
+          Remote · 2023 – 2024
+        </p>
+
+        <p class="text-gray-300 mb-4">
+          Developed high-performance trading interfaces focused on speed, accuracy, and real-time market data.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Built responsive trading UIs using React, TailwindCSS, and Bootstrap</li>
+          <li>Implemented WebSocket-based real-time price updates</li>
+          <li>Integrated live charts and financial data visualizations</li>
+          <li>Improved page performance using Vite and Webpack optimizations</li>
+        </ul>
+      </div>
+
+      <!-- Web3 Africa -->
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-white">
+          Frontend Developer — Web3 Africa
+        </h3>
+        <p class="text-sm text-gray-400 mb-4">
+          Remote · 2023 – Present
+        </p>
+
+        <p class="text-gray-300 mb-4">
+          Contributing to a Web3-focused platform aimed at education, community building, and crypto adoption.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Built modern, reusable UI components and full application pages</li>
+          <li>Integrated APIs and enhanced responsiveness across devices</li>
+          <li>Implemented animations and interactive user flows</li>
+          <li>Worked with React, TypeScript, TailwindCSS, MUI, and Ant Design</li>
+        </ul>
+      </div>
+
+      <!-- Start Innovation Hub -->
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-white">
+          Frontend Developer — Start Innovation Hub
+        </h3>
+        <p class="text-sm text-gray-400 mb-4">
+          Uyo / Remote · 2020 – 2023
+        </p>
+
+        <p class="text-gray-300 mb-4">
+          Delivered real-world frontend solutions across multiple industries while maintaining high performance
+          and strong client satisfaction.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Developed and maintained over 80 production-ready web pages</li>
+          <li>Reduced UI load time by up to 75% through optimization and refactoring</li>
+          <li>Built interfaces for e-commerce, healthcare, and business platforms</li>
+          <li>Achieved a 98.5% client satisfaction rate across delivered projects</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -174,66 +304,105 @@ body {
   </div>
 </section>
 
+<div class="flex justify-center gap-4 mb-12">
+  <button class="filter-btn active">All</button>
+  <button class="filter-btn">React</button>
+  <button class="filter-btn">JavaScript</button>
+  <button class="filter-btn">UI</button>
+</div>
 
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="py-28 px-6 bg-[#111111]">
+<!-- PROJECTS -->
+<section id="projects" class="py-28 px-6 bg-[#111]">
   <div class="max-w-7xl mx-auto fade">
     <h2 class="text-4xl font-bold text-orange-500 text-center mb-16">My Projects</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <!-- Project Card -->
-      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
-        <img src="https://via.placeholder.com/600x400" alt="Project One" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
-          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project One</h3>
-          <p class="text-gray-300 mb-4">A modern responsive website built with TailwindCSS and interactive animations.</p>
-          <button onclick="openModal('Project One','https://via.placeholder.com/800x600','A full description of Project One including features, tech stack, and outcomes.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
+
+      <!-- PROJECT 1 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <span class="absolute top-4 left-4 bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+          Featured
+        </span>
+        <img src="./Images/Port2.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'E-Commerce Store',
+            './Images/Port2.jpg',
+            'A modern e-commerce frontend featuring cart logic, dynamic pricing, and responsive UI.',
+            ['HTML','Tailwind CSS','JavaScript'],
+            ['Responsive design','Cart functionality','Optimized UX'],
+            'https://your-live-site.netlify.app',
+            'https://github.com/koja7097/Product-Storefront-E-commerce-site'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
         </div>
       </div>
 
-      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
-        <img src="https://via.placeholder.com/600x400" alt="Project Two" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
-          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project Two</h3>
-          <p class="text-gray-300 mb-4">Interactive UI components and smooth animations for a modern web app.</p>
-          <button onclick="openModal('Project Two','https://via.placeholder.com/800x600','Detailed description of Project Two with technologies and features.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
+      <!-- PROJECT 2 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/Molly VirPay.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Admin Dashboard',
+            '/Images/Molly VirPay.png',
+            'A responsive admin dashboard UI with charts and analytics.',
+            ['HTML','Tailwind','Chart.js'],
+            ['Clean layout','Reusable components','Performance focused'],
+            'https://dashboard.netlify.app',
+            'https://github.com/yourusername/dashboard'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
+        </div>
+      </div>
+ 
+      <!-- PROJECT 3 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/Large.webp" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Landing Page',
+            './Images/Large.webp',
+            'High-converting landing page with animations and SEO structure.',
+            ['HTML','CSS','JavaScript'],
+            ['Fast load','SEO optimized','Modern animations'],
+            'https://landing.netlify.app',
+            'https://github.com/yourusername/landing'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
         </div>
       </div>
 
-      <div class="group relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-500">
-        <img src="https://via.placeholder.com/600x400" alt="Project Three" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
-          <h3 class="text-2xl font-bold text-orange-500 mb-2">Project Three</h3>
-          <p class="text-gray-300 mb-4">A fully responsive web application with swipe effects and engaging animations.</p>
-          <button onclick="openModal('Project Three','https://via.placeholder.com/800x600','Full description of Project Three with tech stack and outcomes.')" class="px-6 py-3 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">View Details</button>
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- Modal -->
-  <div id="projectModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50">
-    <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-3xl w-full p-6 relative">
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-orange-500 text-2xl">&times;</button>
-      <h3 id="modalTitle" class="text-3xl font-bold text-orange-500 mb-4"></h3>
-      <img id="modalImage" src="" alt="" class="w-full h-64 object-cover rounded mb-4">
-      <p id="modalDesc" class="text-gray-300"></p>
-      <div class="flex gap-4 mt-4">
-  <a href="https://your-live-link.netlify.app"
-     target="_blank"
-     class="px-5 py-2 bg-orange-500 rounded-full font-semibold hover:bg-orange-600 transition">
-     Live Demo
-  </a>
 
-  <a href="https://github.com/yourusername/project-repo"
-     target="_blank"
-     class="px-5 py-2 border border-orange-500 rounded-full font-semibold hover:bg-orange-500/10 transition">
-     GitHub
-  </a>
+<!-- MODAL -->
+<div id="projectModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+  <div class="bg-gray-900 rounded-2xl max-w-3xl w-full p-6 relative">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-orange-500 text-2xl">&times;</button>
+
+    <h3 id="modalTitle" class="text-3xl font-bold text-orange-500 mb-4"></h3>
+    <img id="modalImage" class="w-full h-64 object-cover rounded mb-4"/>
+
+    <p id="modalDesc" class="text-gray-300 mb-4"></p>
+
+    <div id="modalTech" class="flex flex-wrap gap-2 mb-4"></div>
+
+    <ul id="modalHighlights" class="list-disc list-inside text-gray-400 mb-6"></ul>
+
+    <div class="flex gap-4">
+      <a id="liveLink" target="_blank" class="px-5 py-2 bg-orange-500 rounded-full font-semibold">Live Demo</a>
+      <a id="githubLink" target="_blank" class="px-5 py-2 border border-orange-500 rounded-full">GitHub</a>
+    </div>
+  </div>
 </div>
-    </div>
-  </div>
 </section>
 
 
