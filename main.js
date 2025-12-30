@@ -63,3 +63,24 @@ buttons.forEach(btn => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = menuBtn.querySelector("i");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-times");
+  });
+
+  // Close menu when link is clicked
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuIcon.classList.add("fa-bars");
+      menuIcon.classList.remove("fa-times");
+    });
+  });
+});
+
