@@ -38,14 +38,57 @@
       detectRetina: true
     }); */
 
-    function openModal(title,img,desc){
-  document.getElementById('projectModal').classList.remove('hidden');
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalImage').src = img;
-  document.getElementById('modalDesc').innerText = desc;
+function openModal(
+  title,
+  image,
+  description,
+  techStack,
+  highlights,
+  liveUrl,
+  githubUrl
+) {
+  // Show modal
+  const modal = document.getElementById("projectModal");
+  modal.classList.remove("hidden");
+
+  // Fill content
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalImage").src = image;
+  document.getElementById("modalDesc").textContent = description;
+
+  // Tech stack
+  const techContainer = document.getElementById("modalTech");
+  techContainer.innerHTML = "";
+  techStack.forEach(tech => {
+    const span = document.createElement("span");
+    span.className = "px-3 py-1 text-sm bg-orange-500/20 text-orange-400 rounded-full";
+    span.textContent = tech;
+    techContainer.appendChild(span);
+  });
+
+  // Highlights
+  const highlightsList = document.getElementById("modalHighlights");
+  highlightsList.innerHTML = "";
+  highlights.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    highlightsList.appendChild(li);
+  });
+
+  
+  // set links properly
+  const liveLink = document.getElementById("liveLink");
+  const githubLink = document.getElementById("githubLink");
+
+  liveLink.href = liveUrl;
+  githubLink.href = githubUrl;
+
+  liveLink.style.display = liveUrl ? "inline-block" : "none";
+  githubLink.style.display = githubUrl ? "inline-block" : "none";
 }
-function closeModal(){
-  document.getElementById('projectModal').classList.add('hidden');
+
+function closeModal() {
+  document.getElementById("projectModal").classList.add("hidden");
 }
 
 window.addEventListener("scroll", () => {
