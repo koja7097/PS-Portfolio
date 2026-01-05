@@ -550,17 +550,21 @@ body {
     Start a Conversation
   </a>
 </section>
-
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="py-28 bg-[#0c0c0c] px-6">
   <div class="max-w-4xl mx-auto text-center fade">
     <h2 class="text-4xl font-bold text-orange-500 mb-6">Contact Me</h2>
 
     <form id="contactForm" class="space-y-4">
-      <input required class="w-full p-4 bg-gray-800 rounded" placeholder="Name">
-      <input required class="w-full p-4 bg-gray-800 rounded" placeholder="Email">
-      <textarea class="w-full p-4 bg-gray-800 rounded h-32" placeholder="Message"></textarea>
-      <button class="px-12 py-4 bg-orange-500 rounded-full font-bold glow">
+      <!-- Add 'name' attributes to match EmailJS template -->
+      <input name="name" required class="w-full p-4 bg-gray-800 rounded" placeholder="Name">
+      <input name="email" type="email" required class="w-full p-4 bg-gray-800 rounded" placeholder="Email">
+      <textarea name="message" required class="w-full p-4 bg-gray-800 rounded h-32" placeholder="Message"></textarea>
+
+      <!-- Hidden field for date/time -->
+      <input type="hidden" name="date_time" id="date_time">
+
+      <button type="submit" class="px-12 py-4 bg-orange-500 rounded-full font-bold glow">
         Send Message
       </button>
     </form>
@@ -612,5 +616,38 @@ document.getElementById("contactForm").addEventListener("submit", e => {
 </script>
 
   <script src="main.js"></script>
+
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your public key
+  emailjs.init('YGJ2IgWa4TihUAU0d');
+
+  const contactForm = document.getElementById("contactForm");
+  const toast = document.getElementById("toast");
+
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Set current date/time
+    document.getElementById("date_time").value = new Date().toLocaleString();
+
+    // Send form via EmailJS
+    emailjs.sendForm('service_5konylc', 'template_6dzoug1', this)
+      .then(() => {
+        // Show toast
+        toast.classList.remove("hidden");
+
+        // Hide toast after 3 seconds
+        setTimeout(() => toast.classList.add("hidden"), 3000);
+
+        // Reset form
+        contactForm.reset();
+      }, (err) => {
+        console.error("FAILED...", err);
+        alert("Oops! Something went wrong. Please try again.");
+      });
+  });
+</script>
   </body>
 </html>
