@@ -555,19 +555,68 @@ body {
   <div class="max-w-4xl mx-auto text-center fade">
     <h2 class="text-4xl font-bold text-orange-500 mb-6">Contact Me</h2>
 
-    <form id="contactForm" class="space-y-4">
-      <!-- Add 'name' attributes to match EmailJS template -->
-      <input name="name" required class="w-full p-4 bg-gray-800 rounded" placeholder="Name">
-      <input name="email" type="email" required class="w-full p-4 bg-gray-800 rounded" placeholder="Email">
-      <textarea name="message" required class="w-full p-4 bg-gray-800 rounded h-32" placeholder="Message"></textarea>
+  <form
+  id="contactForm"
+  name="contact"
+  method="POST"
+  enctype="multipart/form-data"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  data-netlify-recaptcha="true"
+  action="/thank-you.html"
+  netlify
+  class="space-y-4"
+>
+  <!-- Netlify required -->
+  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="bot-field">
 
-      <!-- Hidden field for date/time -->
-      <input type="hidden" name="date_time" id="date_time">
+  <input
+    name="name"
+    required
+    class="w-full p-4 bg-gray-800 rounded"
+    placeholder="Name"
+  >
 
-      <button type="submit" class="px-12 py-4 bg-orange-500 rounded-full font-bold glow">
-        Send Message
-      </button>
-    </form>
+  <input
+    name="email"
+    type="email"
+    required
+    class="w-full p-4 bg-gray-800 rounded"
+    placeholder="Email"
+  >
+
+  <textarea
+    name="message"
+    required
+    class="w-full p-4 bg-gray-800 rounded h-32"
+    placeholder="Message"
+  ></textarea>
+
+  <!-- File Upload -->
+  <input
+    type="file"
+    name="attachment"
+    class="w-full p-3 bg-gray-800 rounded text-gray-400"
+    accept=".pdf,.doc,.docx,.png,.jpg"
+  >
+
+  <!-- reCAPTCHA -->
+  <div data-netlify-recaptcha="true"></div>
+
+  <button
+    type="submit"
+    id="submitBtn"
+    class="px-12 py-4 bg-orange-500 rounded-full font-bold glow flex items-center justify-center gap-2"
+  >
+    <span id="btnText">Send Message</span>
+    <span
+      id="loader"
+      class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+    ></span>
+  </button>
+</form>
+
 
     <div id="toast" class="hidden mt-6 text-green-400 toast">
       Message sent successfully 🚀
@@ -608,45 +657,21 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
-document.getElementById("contactForm").addEventListener("submit", e => {
-  e.preventDefault();
-  document.getElementById("toast").classList.remove("hidden");
-  e.target.reset();
-});
+
 </script>
 
   <script src="main.js"></script>
 
-  <!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  // Initialize EmailJS with your public key
-  emailjs.init('YGJ2IgWa4TihUAU0d');
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const loader = document.getElementById("loader");
 
-  const contactForm = document.getElementById("contactForm");
-  const toast = document.getElementById("toast");
-
-  contactForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // Set current date/time
-    document.getElementById("date_time").value = new Date().toLocaleString();
-
-    // Send form via EmailJS
-    emailjs.sendForm('service_5konylc', 'template_6dzoug1', this)
-      .then(() => {
-        // Show toast
-        toast.classList.remove("hidden");
-
-        // Hide toast after 3 seconds
-        setTimeout(() => toast.classList.add("hidden"), 3000);
-
-        // Reset form
-        contactForm.reset();
-      }, (err) => {
-        console.error("FAILED...", err);
-        alert("Oops! Something went wrong. Please try again.");
-      });
+  form.addEventListener("submit", () => {
+    btn.disabled = true;
+    btnText.textContent = "Sending...";
+    loader.classList.remove("hidden");
   });
 </script>
   </body>
