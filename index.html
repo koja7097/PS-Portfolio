@@ -13,7 +13,7 @@
   <!-- Particles.js -->
  <!--  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@3.12.0/tsparticles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.12.0/tsparticles.bundle.min.js"></script> -->
-  <script src="https://cdn.jsdeliver.net/npm/tsparticles@3.12.0/dist/tsparticles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.12.0/dist/tsparticles.min.js"></script>
  <style>
 body {
   font-family: 'Poppins', sans-serif;
@@ -333,12 +333,12 @@ body {
 </div>
 
 
-<!-- PROJECTS -->
 <section id="projects" class="py-28 px-6 bg-[#111]">
   <div class="max-w-7xl mx-auto fade">
     <h2 class="text-4xl font-bold text-orange-500 text-center mb-16">My Projects</h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- MOBILE FIXED GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
       <!-- PROJECT 1 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
@@ -346,12 +346,13 @@ body {
           Featured
         </span>
         <img src="./Images/Store.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'E-Commerce Store',
             './Images/Store.png',
-            'A modern e-commerce frontend featuring cart logic, dynamic pricing, and responsive UI. Built with speed, and clarity. designed to deliver a smooth shopping experience',
-            ['React','Material UI','JSX', 'RestfulAPI'],
+            'A modern e-commerce frontend featuring cart logic, dynamic pricing, and responsive UI.',
+            ['React','Material UI','JSX','REST API'],
             ['Responsive design','Cart functionality','Optimized UX'],
             'https://storefront-ecom-rust.vercel.app/',
             'https://github.com/koja7097/Product-Storefront-E-commerce-site'
@@ -365,12 +366,13 @@ body {
       <!-- PROJECT 2 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/Admin Dashboard.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'Admin Dashboard',
             './Images/Admin Dashboard.png',
-            'A responsive admin dashboard UI with charts and analytics. A clean data-driven dashboard.',
-            ['React','AntD','Chart.js', 'Recharts', 'Vite'],
+            'A responsive admin dashboard UI with charts and analytics.',
+            ['React','AntD','Chart.js','Recharts','Vite'],
             ['Clean layout','Reusable components','Performance focused'],
             'https://admin-dashboard-delta-sandy.vercel.app',
             'https://github.com/koja7097/Finance-Admin-Dashboard'
@@ -382,36 +384,36 @@ body {
       </div>
 
       <!-- PROJECT 3 -->
-<div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
-  <img src="./Images/saas-platform.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
-  
-  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-    <button onclick="openModal(
-      'Intelligent SaaS Platform',
-      './Images/saas-platform.jpg',
-      'A modern SaaS platform frontend built to showcase intelligent automation tools and scalable digital solutions. Designed with a strong focus on clarity, smooth user flows, and high-conversion product presentation.',
-      ['Next.js','React','TypeScript','Tailwind CSS'],
-      ['SaaS-focused UI/UX','Scalable component architecture','Responsive across all devices','Smooth animations & interactions','Conversion-driven layout'],
-      'https://intelligent-saa-s-platform.vercel.app/'
-    )"
-    class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
-      View Details
-    </button>
-  </div>
-</div>
- 
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/saas-platform.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Intelligent SaaS Platform',
+            './Images/saas-platform.jpg',
+            'Modern SaaS platform built for scalability and conversion-focused UI.',
+            ['Next.js','React','TypeScript','Tailwind CSS'],
+            ['Scalable UI','Responsive design','Smooth UX','Conversion-focused layout'],
+            'https://intelligent-saa-s-platform.vercel.app/'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
+        </div>
+      </div>
+
       <!-- PROJECT 4 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/Large.webp" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'Landing Page',
             './Images/Large.webp',
-            'High-converting landing page with animations and SEO structure, designed to capture attention and drive action.',
+            'High-converting landing page with animations and SEO structure.',
             ['HTML','CSS','JavaScript'],
             ['Fast load','SEO optimized','Modern animations'],
             'https://fancy-pudding-cf1bfc.netlify.app'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -419,18 +421,18 @@ body {
         </div>
       </div>
 
-           <!-- PROJECT 5 -->
+      <!-- PROJECT 5 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/web3 Africa.webp" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'Web3 Africa Official Website',
             './Images/web3 Africa.webp',
-            'The site showcase blockchain initiatives in Africa with a responsive layout, clean Design, and dynamic content. it highlights a frontend development skills, attention to details and commitment to building impactful digital solutions.',
-            ['React','Vite','React-Bootsrap', 'React-Router'],
-            ['Fast load','SEO optimized','dynamic Routing', 'Attention to details'],
+            'Blockchain education platform with responsive UI.',
+            ['React','Vite','React Bootstrap','React Router'],
+            ['Fast load','SEO optimized','Dynamic routing'],
             'https://web3africaglobal.org'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -438,18 +440,18 @@ body {
         </div>
       </div>
 
-           <!-- PROJECT 6 -->
+      <!-- PROJECT 6 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/foodSearch.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'API Meal Search',
             './Images/foodSearch.jpg',
-            'An interactive site that let users search for meals, displaying results and name of meals.',
+            'Meal search API project with dynamic results.',
             ['HTML','CSS','JavaScript'],
-            ['Fast load','SEO optimized','Modern animations'],
+            ['Fast load','SEO optimized','Modern UI'],
             'https://sunny-dusk-e73547.netlify.app'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -457,18 +459,18 @@ body {
         </div>
       </div>
 
-           <!-- PROJECT 7 -->
+      <!-- PROJECT 7 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/goldie bead.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
             'Goldie Bead Shop',
             './Images/goldie bead.png',
-            'A Bead Ad site that displays Bridal,Groom,Luxury Beads for sale which connects buyers and Top clients with the owners.',
-            ['React','CSS','Jsx'],
+            'Bead marketplace connecting buyers and sellers.',
+            ['React','CSS','JSX'],
             ['Fast load','SEO optimized','Modern animations'],
             'https://goldie-bridal-bead.netlify.app'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -476,18 +478,18 @@ body {
         </div>
       </div>
 
-            <!-- PROJECT 8 -->
+      <!-- PROJECT 8 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/painting.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
-            'Paint/Painters Services Site',
+            'Painter Services Site',
             './Images/painting.png',
-            'Connect users with professional painters, showcasing projects, services, reviews and easy building search.',
+            'Connect users with professional painters.',
             ['HTML','CSS','JavaScript'],
-            ['Fast load','SEO optimized','Modern animations'],
+            ['Fast load','SEO optimized','Modern UI'],
             'https://singular-naiad-9bca96.netlify.app'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -495,18 +497,18 @@ body {
         </div>
       </div>
 
-            <!-- PROJECT 9 -->
+      <!-- PROJECT 9 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/meal.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
-            'E-Commerce Meal Cart',
+            'Meal Cart App',
             './Images/meal.jpg',
-            'A dynamic shopping platform with add to cart, products quantity updates on the cart and realtime total price calculation.',
+            'Shopping cart with realtime calculations.',
             ['HTML','CSS','JavaScript'],
-            ['Fast load','SEO optimized','Modern animations'],
+            ['Fast load','SEO optimized','Modern UI'],
             'https://meal-webcom.netlify.app'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -514,19 +516,19 @@ body {
         </div>
       </div>
 
-            <!-- PROJECT 10 -->
+      <!-- PROJECT 10 -->
       <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
         <img src="./Images/port.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
         <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <button onclick="openModal(
-            'Built Portfolio',
+            'Portfolio Project',
             './Images/port.png',
-            'My Portfolio',
-            ['React','MUI','Jsx', 'router', 'lightweight', 'react-lottie'],
-            ['Fast load','SEO optimized','Modern animations', 'Optimized Performance'],
+            'My personal portfolio website.',
+            ['React','MUI','Router'],
+            ['Fast load','SEO optimized','Modern animations'],
             'https://preciousfrontend.vercel.app/',
             'https://github.com/koja7097/Precious-Frontend-Portfolio'
-            
           )"
           class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
             View Details
@@ -534,60 +536,62 @@ body {
         </div>
       </div>
 
+      <!-- PROJECT 11 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/365arbitrage.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
 
-<!-- PROJECT 11 -->
-<div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
-  <img src="./Images/365arbitrage.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
-  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-    <button onclick="openModal(
-      'Financial Arbitrage Platform',
-      './Images/365arbitrage.png',
-      'A fintech-focused platform frontend designed to present arbitrage opportunities with clarity and trust. Built with structured layouts, smooth interactions, and conversion-focused UI.',
-      ['React','Next.js','TypeScript','Tailwind CSS'],
-      ['Clean financial UI','Responsive across devices','Performance optimized','Structured data presentation'],
-      'https://365arbitrage.com'
-    )"
-    class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
-      View Details
-    </button>
-  </div>
-</div>
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Arbitrage Platform',
+            './Images/365arbitrage.png',
+            'Financial trading UI platform.',
+            ['React','Next.js','TypeScript','Tailwind'],
+            ['Clean UI','Responsive','Optimized'],
+            'https://365arbitrage.com'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
+        </div>
+      </div>
 
-<!-- PROJECT 12 -->
-<div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
-  <img src="./Images/project100.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
-  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-    <button onclick="openModal(
-      'Corporate Business Platform',
-      './Images/project100.png',
-      'A modern corporate website built to communicate brand vision and services clearly. Focused on structured content, smooth navigation, and a professional user experience.',
-      ['Next.js','React','Tailwind CSS','JavaScript'],
-      ['Professional layout','Clear content hierarchy','Responsive design','Smooth navigation'],
-      'https://www.project100.com.ng'
-    )"
-    class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
-      View Details
-    </button>
-  </div>
-</div>
+      <!-- PROJECT 12 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/project100.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
 
-<!-- PROJECT 13 -->
-<div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
-  <img src="./Images/doa.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
-  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-    <button onclick="openModal(
-      'Perfume & Cosmetics Storefront',
-      './Images/doa.png',
-      'An elegant e-commerce frontend for a beauty brand, designed to highlight products and drive purchases through a clean, visually appealing interface.',
-      ['React','Next.js','Tailwind CSS','JavaScript'],
-      ['Product-focused UI','Mobile-first design','Smooth user flow','Optimized visuals'],
-      'https://doaperfumescosmetics.com'
-    )"
-    class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
-      View Details
-    </button>
-  </div>
-</div>
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Corporate Platform',
+            './Images/project100.png',
+            'Corporate business website.',
+            ['Next.js','React','Tailwind'],
+            ['Professional UI','Clean structure','Responsive'],
+            'https://www.project100.com.ng'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <!-- PROJECT 13 -->
+      <div class="group relative bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <img src="./Images/doa.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700">
+
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <button onclick="openModal(
+            'Perfume Store',
+            './Images/doa.png',
+            'Beauty e-commerce storefront.',
+            ['React','Next.js','Tailwind'],
+            ['Product UI','Mobile-first','Smooth UX'],
+            'https://doaperfumescosmetics.com'
+          )"
+          class="px-6 py-3 bg-orange-500 rounded-full font-semibold">
+            View Details
+          </button>
+        </div>
+      </div>
 
     </div>
   </div>
