@@ -98,11 +98,28 @@ window.addEventListener("scroll", () => {
 });
 
 const buttons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll("#projects .group");
 
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
+    const filter = btn.textContent.trim().toLowerCase();
+
     buttons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
+
+    projects.forEach(project => {
+      const category = project.dataset.category;
+
+      if (filter === "all") {
+        project.style.display = "block";
+      } 
+      else if (category === filter) {
+        project.style.display = "block";
+      } 
+      else {
+        project.style.display = "none";
+      }
+    });
   });
 });
 
